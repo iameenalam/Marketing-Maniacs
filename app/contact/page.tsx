@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 "use client";
 
 import React, { useEffect } from "react";
@@ -43,7 +45,8 @@ const ContactSection = () => {
             <span>
               Book a
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-                {" "} Call {" "}
+                {" "}
+                Call{" "}
               </span>
             </span>
           </motion.div>
@@ -92,7 +95,8 @@ const ContactSection = () => {
               <span>
                 Contact
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-                  {" "} Us {" "}
+                  {" "}
+                  Us{" "}
                 </span>
               </span>
             </motion.div>
@@ -105,6 +109,35 @@ const ContactSection = () => {
             >
               Feel free to reach out with any questions.
             </motion.p>
+
+            <form className="mt-8 space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                className="w-full p-3 rounded focus:outline-none focus:ring bg-[#0c0920] border-[2px] border-[#fff] border-opacity-10 text-white"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                className="w-full p-3 rounded focus:outline-none focus:ring text-white bg-[#0c0920] border-[2px] border-[#fff] border-opacity-10"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                name="message"
+                className="w-full p-3 rounded focus:outline-none focus:ring text-white bg-[#0c0920] border-[2px] border-[#fff] border-opacity-10"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className="button-primary w-full px-4 text-center cursor-pointer max-w-[200px] text-sm md:text-base py-3 text-white font-semibold rounded transition-colors duration-300"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
           <motion.div
             initial="hidden"
