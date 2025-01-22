@@ -31,22 +31,6 @@ function about() {
     },
   ];
 
-  const counterData = [
-    {
-      number: 100,
-      text: "Clients",
-    },
-    {
-      number: 30,
-      text: "Running Projects",
-    },
-    {
-      number: 80,
-      text: "Projects Completed",
-    },
-  ];
-
-  // Reusable slide-up variant
   const slideUp = {
     hidden: { opacity: 0, y: 50 },
     visible: {
