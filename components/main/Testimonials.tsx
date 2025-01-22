@@ -90,7 +90,9 @@ const Testimonials = () => {
                 height={100}
                 className="rounded-full mx-auto mb-4"
               />
-              <p className="text-lg italic">"{testimonial.feedback}"</p>
+              <p className="text-lg italic">
+                &ldquo;{testimonial.feedback}&rdquo;
+              </p>
               <h3 className="text-xl font-semibold mt-4">{testimonial.name}</h3>
               <p className="text-gray-400 text-sm">{testimonial.designation}</p>
             </motion.div>
