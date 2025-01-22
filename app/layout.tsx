@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
+// import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Newsletter from "@/components/main/Newsletter";
 import Footer from "@/components/main/Footer";
@@ -42,7 +42,7 @@ export default function RootLayout({
       />
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <body className={`${inter.className} bg-[#030014] overflow-x-hidden`}>
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
         <Navbar />
         {children}
         <Newsletter />
