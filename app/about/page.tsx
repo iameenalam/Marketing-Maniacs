@@ -1,19 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
 import Link from "next/link";
 import Clients from "@/components/main/Clients";
 import Testimonials from "@/components/main/Testimonials";
-import CountUp from "react-countup";
 
 function about() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   const teamMembers = [
     {
@@ -60,23 +55,6 @@ function about() {
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
-
-  // Check if the section is in view
-  useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check visibility on initial load
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
@@ -364,41 +342,6 @@ function about() {
 
       <Clients />
       <Testimonials />
-
-      {/* Counter Section */}
-      {/* <section ref={sectionRef} className="py-16 text-white">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.8, ease: "easeOut" },
-              },
-            }}
-            className="flex flex-wrap justify-center gap-48"
-          >
-            {counterData.map((item, index) => (
-              <motion.div
-                key={index}
-                custom={index}
-                className="flex flex-col items-center justify-center"
-              >
-                <h3 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500 mb-2">
-                  {isVisible && (
-                    <CountUp end={item.number} duration={4} delay={0.5} />
-                  )}
-                  +
-                </h3>
-                <p className="text-lg text-gray-400">{item.text}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
     </>
   );
 }
