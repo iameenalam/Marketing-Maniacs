@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import Hero from "@/components/main/hero";
 import About from "@/components/main/About";
 import Services from "@/components/main/services";
