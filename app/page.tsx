@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
+import LoadingScreen from "@/components/main/LoadingScreen";
 import Hero from "@/components/main/hero";
 import About from "@/components/main/About";
 import Services from "@/components/main/services";
@@ -10,11 +11,13 @@ export default function Home() {
   return (
     <main className="h-full w-full">
       <div className="flex flex-col gap-20">
-        <Hero />
-        <About />
-        <Services />
-        <TrustedClients />
-        <Testimonials />
+        <LoadingScreen>
+          <Hero />
+          <About />
+          <Services />
+          <TrustedClients />
+          <Testimonials />
+        </LoadingScreen>
       </div>
     </main>
   );
