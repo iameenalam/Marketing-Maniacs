@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const slideUp = {
@@ -25,12 +26,15 @@ const Footer = () => {
           Marketing Maniacs &copy; 2025
         </span>
 
-        <Image
-          src="/assets/logox.png"
-          width={100}
-          height={100}
-          alt="Marketing Maniacs Logo"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/logox.png"
+            width={100}
+            height={100}
+            alt="Marketing Maniacs Logo"
+            className="cursor-pointer"
+          />
+        </Link>
 
         <span className="text-gray-400 text-sm md:text-base">
           All Rights Reserved
