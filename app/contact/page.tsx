@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromTop } from "@/utils/motion";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import Image from "next/image";
+import FrequentlyAsked from "@/components/main/FreqAsked";
 
 const slideUp = {
   hidden: { opacity: 0, y: 50 },
@@ -156,6 +157,8 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </motion.section>
+
+      <FrequentlyAsked />
     </>
   );
 };
